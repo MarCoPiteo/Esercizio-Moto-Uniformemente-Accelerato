@@ -8,8 +8,8 @@ let h = 400
 let d = 50
 let r = d/2
 
-let ax = -0.01
-let vx = 0
+let accelerazione = -0.01
+let velocita = 0
 let x = 0
 
 function setup() {
@@ -23,8 +23,8 @@ function draw() {
   circle(x,h/2,d)
   fill(0,255,0)
   
-  vx = vx + ax
-  x = x + vx
+  velocita = velocita + accelerazione
+  x = x + velocita
   
   if (x >= 425) {
     x = -25
