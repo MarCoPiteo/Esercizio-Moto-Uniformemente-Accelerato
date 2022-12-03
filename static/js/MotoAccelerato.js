@@ -8,10 +8,12 @@ let h = 400
 let d = 50
 let r = d/2
 
-let accelerazioneY = -0.01
 let accelerazioneX = -0.01
-let velocita = 0
+let accelerazioneY = 0.01
+let velocitaX = 0
+let velocitaY = 0
 let x = 0
+let y = h/2
 
 function setup() {
   createCanvas(w, h);
@@ -21,17 +23,24 @@ function setup() {
 function draw() {
   background(255,0,0);
   
-  circle(x,h/2,d)
+  circle(x,y,d)
   fill(0,255,0)
   
-  velocita = velocita + accelerazioneX
-  x = x + velocita
+  velocitaX = velocitaX + accelerazioneX
+  velocitaY = velocitaY - accelerazioneY
+
+  x = x + velocitaX
+  y = y - velocitaY
   
   if (x >= w+r) {
     x = -r
-  }
-  
-  if (x <= -r) {
+  } else if (x <= -r) {
     x = w+r
+  }
+
+  if (y >= h+r) {
+    y = -r
+  } else if (y <= -r) {
+    y = h+r
   }
 }
