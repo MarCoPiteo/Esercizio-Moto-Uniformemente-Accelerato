@@ -12,14 +12,25 @@
 			color: white;
 			margin: 0;
 		}
+
+		.flex {
+			display: flex;
+		}
 	</style>
 </head>
 <body>
-	<div class="formWrapper">
+	<div class="formWrapper flex">
 		<div>
-			<label id="accelerationValue"></label>
+			<label id="accelerationXValue"></label>
 			<div>
-				<input type="range" name="accelerazione" min="-0.04" max="0.04" step="0.01" value="-0.01">
+				<input type="range" name="accelerazioneX" min="-0.04" max="0.04" step="0.01" value="-0.01">
+			</div>
+		</div>
+
+		<div>
+			<label id="accelerationYValue"></label>
+			<div>
+				<input type="range" name="accelerazioneY" min="-0.04" max="0.04" step="0.01" value="-0.01">
 			</div>
 		</div>
 	</div>

@@ -8,7 +8,8 @@ let h = 400
 let d = 50
 let r = d/2
 
-let accelerazione = -0.01
+let accelerazioneY = -0.01
+let accelerazioneX = -0.01
 let velocita = 0
 let x = 0
 
@@ -23,16 +24,14 @@ function draw() {
   circle(x,h/2,d)
   fill(0,255,0)
   
-  velocita = velocita + accelerazione
+  velocita = velocita + accelerazioneX
   x = x + velocita
   
-  if (x >= 425) {
-    x = -25
+  if (x >= w+r) {
+    x = -r
   }
   
-  if (x <= -25) {
-    x = 425
+  if (x <= -r) {
+    x = w+r
   }
 }
-
-accelerationValue.innerHTML = `ACCELERAZIONE: ${accelerazione}`
