@@ -27,7 +27,7 @@ function draw() {
   fill(0,255,0)
   
   velocitaX = velocitaX + accelerazioneX
-  velocitaY = velocitaY - accelerazioneY
+  velocitaY = velocitaY + accelerazioneY
 
   x = x + velocitaX
   y = y - velocitaY
